@@ -37,6 +37,12 @@ button:focus {
   outline: $white auto 1px;
 }
 
+.section__title {
+  font-family: Rubik;
+  font-weight: bold;
+  font-size: 42px;
+}
+
 /* Vendors */
 
 /* Blocks */
@@ -46,4 +52,5 @@ button:focus {
 @import "blocks/header";
 @import "blocks/intro";
 @import "blocks/counter";
+@import "blocks/opportunities";
 @import "blocks/footer";
