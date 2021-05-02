@@ -33,6 +33,10 @@ a {
   }
 }
 
+button:focus {
+  outline: $white auto 1px;
+}
+
 /* Vendors */
 
 /* Blocks */
