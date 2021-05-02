@@ -553,7 +553,7 @@ button:focus {
       line-height: 1.5; }
 
 .opportunities {
-  padding: 198px 0 10px;
+  padding: 198px 0 100px;
   background: #fafafa; }
   .opportunities__inner {
     display: grid;
@@ -600,3 +600,27 @@ button:focus {
       background: #ffffff;
       box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
       border-radius: 4px; }
+
+.getting {
+  padding: 95px 0 70px; }
+  .getting__inner {
+    display: grid;
+    grid-row-gap: 76px; }
+  .getting__item {
+    display: grid;
+    grid-template-columns: 530px auto;
+    grid-column-gap: 40px;
+    align-items: center;
+    justify-content: space-between; }
+    .getting__item-title {
+      font-weight: 600;
+      font-size: 2.4rem;
+      line-height: 1.5;
+      margin-bottom: 12px; }
+    .getting__item--center {
+      grid-template-columns: auto 530px; }
+  .getting__img--center {
+    margin-left: 70px; }
+
+.section__title--getting {
+  margin-bottom: 36px; }
