@@ -5,6 +5,7 @@
 
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 *,
@@ -16,9 +17,10 @@ html {
 body {
   background-color: $white;
 
-  font-family: Lato, sans-serif;
-  font-size: 62.5%;
-  line-height: 1;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.2;
   color: $black;
 }
 
@@ -38,4 +40,5 @@ a {
 @import "blocks/page";
 @import "blocks/container";
 @import "blocks/header";
+@import "blocks/intro";
 @import "blocks/footer";

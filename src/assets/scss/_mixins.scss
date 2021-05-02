@@ -1,14 +1,5 @@
-//media mixins
-
 @mixin breakpoint($bp) {
   @media (max-width: $bp) {
     @content;
   }
-}
-
-// fonts mixins - use: @include f500;
-
-@mixin f500 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
 }
