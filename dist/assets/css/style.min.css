@@ -429,6 +429,27 @@ button:focus {
   font-weight: bold;
   font-size: 42px; }
 
+.try-btn {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-column-gap: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 276px;
+  height: 60px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #3355ff;
+  border-radius: 4px;
+  border: none;
+  transition: background 0.1s linear; }
+  .try-btn:hover {
+    background: #122791; }
+
+.try-arrow {
+  width: 60px;
+  height: 16px; }
+
 /* Vendors */
 /* Blocks */
 .page {
@@ -492,25 +513,6 @@ button:focus {
     grid-template-columns: repeat(2, max-content);
     grid-column-gap: 24px;
     align-items: center; }
-    .intro__try-btn {
-      display: grid;
-      grid-template-columns: repeat(2, max-content);
-      grid-column-gap: 8px;
-      justify-content: center;
-      align-items: center;
-      width: 276px;
-      height: 60px;
-      font-weight: 600;
-      color: #ffffff;
-      background: #3355ff;
-      border-radius: 4px;
-      border: none;
-      transition: background 0.1s linear; }
-      .intro__try-btn:hover {
-        background: #122791; }
-    .intro__try-arrow {
-      width: 60px;
-      height: 16px; }
     .intro__try-text {
       position: relative;
       padding-left: 46px; }
@@ -557,10 +559,8 @@ button:focus {
   background: #fafafa; }
   .opportunities__inner {
     display: grid;
-    grid-template-columns: repeat(3, 376px);
-    grid-template-rows: repeat(2, max-content);
-    grid-column-gap: 24px;
-    grid-row-gap: 66px;
+    grid: repeat(2, max-content)/repeat(3, minmax(auto, 376px));
+    grid-gap: 66px 24px;
     align-items: start; }
   .opportunities__title {
     width: 100%;
@@ -624,3 +624,35 @@ button:focus {
 
 .section__title--getting {
   margin-bottom: 36px; }
+
+.banner {
+  padding: 88px 0;
+  margin: 160px 0 95px;
+  background: #4867ff url(/assets/images/banner/banner-bg.png) no-repeat right; }
+  .banner__inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    color: #ffffff; }
+  .banner__suptitle {
+    font-family: Rubik;
+    font-size: 2.8rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 4px; }
+  .banner__title {
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 7.4rem;
+    letter-spacing: 0.03em;
+    margin-bottom: 19px; }
+  .banner__img {
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: 1; }
+
+.try-btn--banner {
+  background: #4867ff;
+  border: 1px solid #ffffff; }
