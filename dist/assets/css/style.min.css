@@ -723,3 +723,14 @@ button:focus {
       padding: 18px 0; }
       .contacts__form-btn:hover {
         background-color: #122791; }
+
+.footer {
+  padding: 32px 0;
+  background-color: #122791; }
+  .footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffffff; }
+    .footer__inner a {
+      color: #ffffff; }
