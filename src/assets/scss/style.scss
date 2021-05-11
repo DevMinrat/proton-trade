@@ -29,7 +29,7 @@ a {
   color: $black;
 
   &:hover {
-    text-decoration: underline;
+    color: $primary;
   }
 }
 
@@ -87,3 +87,11 @@ button:focus {
 @import "blocks/partners";
 @import "blocks/contacts";
 @import "blocks/footer";
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}

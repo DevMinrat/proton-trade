@@ -1,0 +1,46 @@
+.banner {
+  padding: 88px 0;
+  margin: 160px 0 95px;
+
+  background: #4867ff url(/assets/images/banner/banner-bg.png) no-repeat right;
+
+  &__inner {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+
+    color: $white;
+  }
+
+  &__suptitle {
+    font-family: Rubik;
+    font-size: 2.8rem;
+    letter-spacing: 0.02em;
+
+    margin-bottom: 4px;
+  }
+
+  &__title {
+    font-family: Rubik;
+    font-weight: bold;
+    font-size: 7.4rem;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 19px;
+  }
+
+  &__img {
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+}
+
+.try-btn--banner {
+  background: #4867ff;
+  border: 1px solid $white;
+}

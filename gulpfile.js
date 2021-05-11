@@ -137,17 +137,6 @@ function cssWatch(cb) {
 function js(cb) {
   return src(path.src.js, { base: srcPath + "assets/js/" })
     .pipe(
-      plumber({
-        errorHandler: function (err) {
-          notify.onError({
-            title: "JS Error",
-            message: "Error: <%= error.message %>",
-          })(err);
-          this.emit("end");
-        },
-      })
-    )
-    .pipe(
       babel({
         presets: ["@babel/preset-env"],
       })
@@ -169,17 +158,6 @@ function js(cb) {
 
 function jsWatch(cb) {
   return src(path.src.js, { base: srcPath + "assets/js/" })
-    .pipe(
-      plumber({
-        errorHandler: function (err) {
-          notify.onError({
-            title: "JS Error",
-            message: "Error: <%= error.message %>",
-          })(err);
-          this.emit("end");
-        },
-      })
-    )
     .pipe(
       babel({
         presets: ["@babel/preset-env"],

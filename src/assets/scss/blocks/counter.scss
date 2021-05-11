@@ -1,0 +1,38 @@
+.counter {
+  position: absolute;
+  left: 50%;
+  bottom: -98px;
+  transform: translateX(-50%);
+
+  &__inner {
+    display: grid;
+    grid-column-gap: 24px;
+    grid-template-columns: repeat(4, 275px);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 43px 28px;
+
+    background: $white;
+    box-shadow: 0px 0px 34px rgba(208, 208, 208, 0.4);
+    border-radius: 4px;
+    border-bottom: 5px solid rgba(211, 210, 243, 0.5);
+
+    &-number {
+      font-weight: bold;
+      font-size: 5.2rem;
+      line-height: 1.5;
+
+      margin-bottom: 4px;
+    }
+
+    &-text {
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+  }
+}

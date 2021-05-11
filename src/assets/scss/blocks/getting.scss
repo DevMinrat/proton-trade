@@ -1,0 +1,36 @@
+.getting {
+  padding: 95px 0 70px;
+
+  &__inner {
+    display: grid;
+    grid-row-gap: 76px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 530px auto;
+    grid-column-gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+
+    &-title {
+      font-weight: 600;
+      font-size: 2.4rem;
+      line-height: 1.5;
+
+      margin-bottom: 12px;
+    }
+
+    &--center {
+      grid-template-columns: auto 530px;
+    }
+  }
+
+  &__img--center {
+    margin-left: 70px;
+  }
+}
+
+.section__title--getting {
+  margin-bottom: 36px;
+}
