@@ -6,7 +6,7 @@
   width: 100%;
   height: 100vh;
 
-  background: url(/assets/images/intro/intro-bg.png) no-repeat right;
+  background: url(/assets/images/intro/intro-bg.png) no-repeat;
 
   &__content {
     font-family: Rubik;
@@ -20,6 +20,10 @@
     letter-spacing: 0.02em;
 
     margin-bottom: 10px;
+
+    @include breakpoint($sm-bp) {
+      font-size: 1.8rem;
+    }
   }
 
   &__title {
@@ -28,11 +32,19 @@
     letter-spacing: 0.03em;
 
     margin-bottom: 5px;
+
+    @include breakpoint($sm-bp) {
+      font-size: 5.8rem;
+    }
   }
 
   &__subtitle {
     font-size: 2rem;
     letter-spacing: 0.01em;
+
+    @include breakpoint($sm-bp) {
+      font-size: 1.6rem;
+    }
   }
 
   &__try {
@@ -40,6 +52,11 @@
     grid-template-columns: repeat(2, max-content);
     grid-column-gap: 24px;
     align-items: center;
+
+    @include breakpoint($md-bp) {
+      grid-template: repeat(2, auto) / auto;
+      grid-row-gap: 12px;
+    }
 
     &-text {
       position: relative;
