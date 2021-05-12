@@ -489,7 +489,10 @@ button:focus {
     .header.mobile .header__inner {
       grid-template-columns: auto;
       justify-content: center;
-      font-size: 32px; }
+      font-size: 3.2rem; }
+      @media (max-width: 575px) {
+        .header.mobile .header__inner {
+          font-size: 2.6rem; } }
 
 @media (max-width: 850px) {
   .menu {
@@ -595,12 +598,36 @@ button:focus {
 .counter {
   position: absolute;
   left: 50%;
-  bottom: -98px;
+  bottom: -160px;
   transform: translateX(-50%); }
+  @media (max-width: 1060px) {
+    .counter {
+      bottom: -350px; } }
+  @media (max-width: 575px) {
+    .counter {
+      position: static;
+      left: auto;
+      bottom: auto;
+      transform: none;
+      padding-top: 60px;
+      background: #fafafa; } }
   .counter__inner {
     display: grid;
     grid-column-gap: 24px;
     grid-template-columns: repeat(4, 275px); }
+    @media (max-width: 1245px) {
+      .counter__inner {
+        grid-template-columns: repeat(4, 240px); } }
+    @media (max-width: 1060px) {
+      .counter__inner {
+        grid-template: repeat(2, auto)/repeat(2, 360px);
+        grid-gap: 24px; } }
+    @media (max-width: 769px) {
+      .counter__inner {
+        grid-template: repeat(2, auto)/repeat(2, 230px); } }
+    @media (max-width: 575px) {
+      .counter__inner {
+        grid-template: repeat(4, auto)/auto; } }
   .counter__item {
     display: flex;
     flex-direction: column;
@@ -610,11 +637,21 @@ button:focus {
     box-shadow: 0px 0px 34px rgba(208, 208, 208, 0.4);
     border-radius: 4px;
     border-bottom: 5px solid rgba(211, 210, 243, 0.5); }
+    @media (max-width: 1245px) {
+      .counter__item {
+        padding: 43px 10px; } }
+    @media (max-width: 1060px) {
+      .counter__item {
+        align-items: center; } }
     .counter__item-number {
       font-weight: bold;
       font-size: 5.2rem;
       line-height: 1.5;
       margin-bottom: 4px; }
+      @media (max-width: 1245px) {
+        .counter__item-number {
+          font-size: 4.2rem;
+          line-height: 1.2; } }
     .counter__item-text {
       font-size: 2rem;
       line-height: 1.5; }
@@ -622,6 +659,9 @@ button:focus {
 .opportunities {
   padding: 198px 0 100px;
   background: #fafafa; }
+  @media (max-width: 1060px) {
+    .opportunities {
+      padding-top: 385px; } }
   .opportunities__inner {
     display: grid;
     grid: repeat(2, max-content)/repeat(3, minmax(auto, 376px));

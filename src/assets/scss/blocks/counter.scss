@@ -1,13 +1,45 @@
 .counter {
   position: absolute;
   left: 50%;
-  bottom: -98px;
+  bottom: -160px;
   transform: translateX(-50%);
+
+  @include breakpoint(1060px) {
+    bottom: -350px;
+  }
+
+  @include breakpoint($sm-bp) {
+    position: static;
+    left: auto;
+    bottom: auto;
+    transform: none;
+
+    padding-top: 60px;
+
+    background: #fafafa;
+  }
 
   &__inner {
     display: grid;
     grid-column-gap: 24px;
     grid-template-columns: repeat(4, 275px);
+
+    @include breakpoint($xl-bp) {
+      grid-template-columns: repeat(4, 240px);
+    }
+
+    @include breakpoint(1060px) {
+      grid-template: repeat(2, auto) / repeat(2, 360px);
+      grid-gap: 24px;
+    }
+
+    @include breakpoint($md-bp) {
+      grid-template: repeat(2, auto) / repeat(2, 230px);
+    }
+
+    @include breakpoint($sm-bp) {
+      grid-template: repeat(4, auto) / auto;
+    }
   }
 
   &__item {
@@ -22,12 +54,25 @@
     border-radius: 4px;
     border-bottom: 5px solid rgba(211, 210, 243, 0.5);
 
+    @include breakpoint($xl-bp) {
+      padding: 43px 10px;
+    }
+
+    @include breakpoint(1060px) {
+      align-items: center;
+    }
+
     &-number {
       font-weight: bold;
       font-size: 5.2rem;
       line-height: 1.5;
 
       margin-bottom: 4px;
+
+      @include breakpoint($xl-bp) {
+        font-size: 4.2rem;
+        line-height: 1.2;
+      }
     }
 
     &-text {

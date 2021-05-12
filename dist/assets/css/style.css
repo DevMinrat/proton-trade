@@ -459,7 +459,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    color: #3355ff;
 }
 
 button:focus {
@@ -515,6 +515,7 @@ button:focus {
 
 .header {
     position: relative;
+    z-index: 999;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -524,6 +525,8 @@ button:focus {
     background-color: #ffffff;
     -webkit-filter: drop-shadow(0px 0px 34px rgba(208, 208, 208, 0.4));
     filter: drop-shadow(0px 0px 34px rgba(208, 208, 208, 0.4));
+    overflow: hidden;
+    transition: all 0.2s linear;
 }
 
 .header__inner {
@@ -544,6 +547,25 @@ button:focus {
     align-items: center;
 }
 
+.header.mobile {
+    position: fixed;
+    height: 100vh;
+}
+
+.header.mobile .header__inner {
+    grid-template-columns: auto;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+@media (max-width: 850px) {
+    .menu {
+        display: none;
+        text-align: center;
+    }
+}
+
 .menu__nav-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -552,18 +574,19 @@ button:focus {
 
 @media (max-width: 850px) {
     .menu__nav-list {
-        display: none;
+        grid-template: repeat(3, 1fr)/1fr;
+        grid-row-gap: 40px;
     }
 }
 
 .burger-menu {
     display: none;
+    height: 20px;
     position: absolute;
+    top: 30px;
     right: 20px;
-    top: 50%;
-    z-index: 99;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+    z-index: 9999;
+    cursor: pointer;
 }
 
 @media (max-width: 850px) {
@@ -579,10 +602,10 @@ button:focus {
     height: 3px;
     background-color: #343a40;
     border-radius: 3px;
+    transition: all 0.2s linear;
 }
 
 .burger {
-    display: block;
     position: relative;
 }
 
@@ -593,11 +616,26 @@ button:focus {
 }
 
 .burger::before {
-    top: -8px;
+    top: 16px;
 }
 
 .burger::after {
     top: 8px;
+}
+
+.burger-menu.menu-on .burger::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.burger-menu.menu-on .burger::before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.burger-menu.menu-on .burger {
+    background: rgba(52, 58, 64, 0);
 }
 
 .intro {
@@ -997,4 +1035,12 @@ button:focus {
 
 .footer__inner a {
     color: #ffffff;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
 }

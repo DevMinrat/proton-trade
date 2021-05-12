@@ -3,6 +3,10 @@
 
   background: #fafafa;
 
+  @include breakpoint(1060px) {
+    padding-top: 385px;
+  }
+
   &__inner {
     display: grid;
     grid: repeat(2, max-content) / repeat(3, minmax(auto, 376px));
