@@ -1,10 +1,19 @@
 .partners {
-  padding: 65px 0 100px;
+  padding: 0 0 100px;
+
+  @include breakpoint($sm-bp) {
+    padding: 0 0 60px;
+  }
 
   &__inner {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-column-gap: 35px;
+
+    @include breakpoint(1030px) {
+      grid-template-columns: auto;
+      grid-row-gap: 30px;
+    }
   }
 
   &__title {
@@ -17,6 +26,16 @@
     justify-content: space-between;
     align-items: flex-start;
     grid-gap: 15px;
+
+    @include breakpoint($md-bp) {
+      grid: auto / repeat(2, auto);
+      justify-content: inherit;
+    }
+
+    @include breakpoint($sm-bp) {
+      grid: auto / auto;
+      grid-gap: 55px;
+    }
 
     &-img--bottom {
       align-self: flex-end;
