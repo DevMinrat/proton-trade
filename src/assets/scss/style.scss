@@ -40,7 +40,11 @@ button:focus {
 .section__title {
   font-family: Rubik;
   font-weight: bold;
-  font-size: 42px;
+  font-size: 4.2rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 4rem;
+  }
 }
 
 .try-btn {

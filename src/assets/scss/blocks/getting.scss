@@ -1,6 +1,10 @@
 .getting {
   padding: 95px 0 70px;
 
+  @include breakpoint($sm-bp) {
+    padding: 60px 0 0;
+  }
+
   &__inner {
     display: grid;
     grid-row-gap: 76px;
@@ -13,24 +17,62 @@
     align-items: center;
     justify-content: space-between;
 
+    @include breakpoint(1060px) {
+      grid-template-columns: auto;
+      grid-row-gap: 24px;
+    }
+
     &-title {
       font-weight: 600;
       font-size: 2.4rem;
       line-height: 1.5;
 
       margin-bottom: 12px;
+
+      @include breakpoint($sm-bp) {
+        font-size: 2rem;
+        line-height: 1.2;
+      }
+    }
+
+    &-content {
+      @include breakpoint(1060px) {
+        grid-row: 2 / 3;
+      }
+    }
+
+    &-content--top {
+      grid-row: inherit;
     }
 
     &--center {
       grid-template-columns: auto 530px;
+
+      @include breakpoint(1060px) {
+        grid-template-columns: auto;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+  }
+
+  &__img--top {
+    grid-area: 1 / 2 / 3 / 3;
+
+    @include breakpoint(1060px) {
+      grid-area: 2 / 1 / 3 / 2;
     }
   }
 
   &__img--center {
     margin-left: 70px;
-  }
-}
 
-.section__title--getting {
-  margin-bottom: 36px;
+    @include breakpoint(1060px) {
+      margin-left: 0;
+    }
+  }
 }

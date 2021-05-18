@@ -427,7 +427,10 @@ button:focus {
 .section__title {
   font-family: Rubik;
   font-weight: bold;
-  font-size: 42px; }
+  font-size: 4.2rem; }
+  @media (max-width: 575px) {
+    .section__title {
+      font-size: 4rem; } }
 
 .try-btn {
   display: grid;
@@ -708,6 +711,9 @@ button:focus {
     background: #ffffff;
     box-shadow: 0px 0px 34px rgba(0, 0, 0, 0.1);
     border-radius: 4px; }
+    @media (max-width: 575px) {
+      .opportunities__item {
+        padding: 60px 18px 24px 24px; } }
     .opportunities__item-title {
       font-weight: bold;
       font-size: 1.8rem;
@@ -740,6 +746,9 @@ button:focus {
 
 .getting {
   padding: 95px 0 70px; }
+  @media (max-width: 575px) {
+    .getting {
+      padding: 60px 0 0; } }
   .getting__inner {
     display: grid;
     grid-row-gap: 76px; }
@@ -749,18 +758,43 @@ button:focus {
     grid-column-gap: 40px;
     align-items: center;
     justify-content: space-between; }
+    @media (max-width: 1060px) {
+      .getting__item {
+        grid-template-columns: auto;
+        grid-row-gap: 24px; } }
     .getting__item-title {
       font-weight: 600;
       font-size: 2.4rem;
       line-height: 1.5;
       margin-bottom: 12px; }
+      @media (max-width: 575px) {
+        .getting__item-title {
+          font-size: 2rem;
+          line-height: 1.2; } }
+    @media (max-width: 1060px) {
+      .getting__item-content {
+        grid-row: 2 / 3; } }
+    .getting__item-content--top {
+      grid-row: inherit; }
     .getting__item--center {
       grid-template-columns: auto 530px; }
+      @media (max-width: 1060px) {
+        .getting__item--center {
+          grid-template-columns: auto; } }
+  .getting__img {
+    width: 100%;
+    max-width: 360px;
+    height: auto; }
+  .getting__img--top {
+    grid-area: 1 / 2 / 3 / 3; }
+    @media (max-width: 1060px) {
+      .getting__img--top {
+        grid-area: 2 / 1 / 3 / 2; } }
   .getting__img--center {
     margin-left: 70px; }
-
-.section__title--getting {
-  margin-bottom: 36px; }
+    @media (max-width: 1060px) {
+      .getting__img--center {
+        margin-left: 0; } }
 
 .banner {
   padding: 88px 0;
