@@ -559,7 +559,7 @@ button:focus {
   align-items: center;
   width: 100%;
   height: 100vh;
-  background: url(/assets/images/intro/intro-bg.png) no-repeat; }
+  background: url(/assets/images/intro/intro-bg.png) no-repeat right; }
   .intro__content {
     font-family: Rubik;
     margin-bottom: 6rem; }
@@ -675,14 +675,33 @@ button:focus {
   @media (max-width: 1060px) {
     .opportunities {
       padding-top: 385px; } }
+  @media (max-width: 575px) {
+    .opportunities {
+      padding: 100px 0 60px; } }
   .opportunities__inner {
     display: grid;
     grid: repeat(2, max-content)/repeat(3, minmax(auto, 376px));
     grid-gap: 66px 24px;
     align-items: start; }
+    @media (max-width: 1100px) {
+      .opportunities__inner {
+        grid: auto/repeat(2, minmax(auto, 376px));
+        justify-content: center; } }
+    @media (max-width: 650px) {
+      .opportunities__inner {
+        grid: auto / auto; } }
   .opportunities__title {
     width: 100%;
     max-width: 300px; }
+    @media (max-width: 1100px) {
+      .opportunities__title {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+        max-width: inherit;
+        margin-bottom: 50px; } }
+    @media (max-width: 650px) {
+      .opportunities__title {
+        grid-column: 1 / 2; } }
   .opportunities__item {
     position: relative;
     padding: 60px 20px 40px 40px;
@@ -766,10 +785,12 @@ button:focus {
     margin-bottom: 19px; }
   .banner__img {
     position: absolute;
-    left: 40%;
+    left: 55%;
     top: 30%;
     transform: translateY(-50%);
-    z-index: 1; }
+    z-index: 1;
+    width: 100%;
+    max-width: 520px; }
 
 .try-btn--banner {
   background: #4867ff;

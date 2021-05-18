@@ -7,16 +7,42 @@
     padding-top: 385px;
   }
 
+  @include breakpoint($sm-bp) {
+    padding: 100px 0 60px;
+  }
+
   &__inner {
     display: grid;
     grid: repeat(2, max-content) / repeat(3, minmax(auto, 376px));
     grid-gap: 66px 24px;
     align-items: start;
+
+    @include breakpoint(1100px) {
+      grid: auto / repeat(2, minmax(auto, 376px));
+      justify-content: center;
+    }
+
+    @include breakpoint(650px) {
+      grid: auto / auto;
+    }
   }
 
   &__title {
     width: 100%;
     max-width: 300px;
+
+    @include breakpoint(1100px) {
+      grid-column: 1 / 3;
+      grid-row: 1 / 2;
+
+      max-width: inherit;
+
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint(650px) {
+      grid-column: 1 / 2;
+    }
   }
 
   &__item {

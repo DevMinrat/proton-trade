@@ -556,7 +556,13 @@ button:focus {
     grid-template-columns: auto;
     -ms-flex-pack: center;
     justify-content: center;
-    font-size: 32px;
+    font-size: 3.2rem;
+}
+
+@media (max-width: 575px) {
+    .header.mobile .header__inner {
+        font-size: 2.6rem;
+    }
 }
 
 @media (max-width: 850px) {
@@ -646,7 +652,7 @@ button:focus {
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: url(/assets/images/intro/intro-bg.png) no-repeat right;
+    background: url(/assets/images/intro/intro-bg.png) no-repeat;
 }
 
 .intro__content {
@@ -661,6 +667,12 @@ button:focus {
     margin-bottom: 10px;
 }
 
+@media (max-width: 575px) {
+    .intro__suptitle {
+        font-size: 1.8rem;
+    }
+}
+
 .intro__title {
     font-weight: bold;
     font-size: 7.4rem;
@@ -668,9 +680,21 @@ button:focus {
     margin-bottom: 5px;
 }
 
+@media (max-width: 575px) {
+    .intro__title {
+        font-size: 5.8rem;
+    }
+}
+
 .intro__subtitle {
     font-size: 2rem;
     letter-spacing: 0.01em;
+}
+
+@media (max-width: 575px) {
+    .intro__subtitle {
+        font-size: 1.6rem;
+    }
 }
 
 .intro__try {
@@ -680,6 +704,13 @@ button:focus {
     grid-column-gap: 24px;
     -ms-flex-align: center;
     align-items: center;
+}
+
+@media (max-width: 769px) {
+    .intro__try {
+        grid-template: repeat(2, auto)/auto;
+        grid-row-gap: 12px;
+    }
 }
 
 .intro__try-text {
@@ -703,15 +734,58 @@ button:focus {
 .counter {
     position: absolute;
     left: 50%;
-    bottom: -98px;
+    bottom: -160px;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+}
+
+@media (max-width: 1060px) {
+    .counter {
+        bottom: -350px;
+    }
+}
+
+@media (max-width: 575px) {
+    .counter {
+        position: static;
+        left: auto;
+        bottom: auto;
+        -webkit-transform: none;
+        transform: none;
+        padding-top: 60px;
+        background: #fafafa;
+    }
 }
 
 .counter__inner {
     display: grid;
     grid-column-gap: 24px;
     grid-template-columns: repeat(4, 275px);
+}
+
+@media (max-width: 1245px) {
+    .counter__inner {
+        grid-template-columns: repeat(4, 240px);
+    }
+}
+
+@media (max-width: 1060px) {
+    .counter__inner {
+        grid-template: repeat(2, auto)/repeat(2, 360px);
+        grid-gap: 24px;
+    }
+}
+
+@media (max-width: 769px) {
+    .counter__inner {
+        grid-template: repeat(2, auto)/repeat(2, 230px);
+    }
+}
+
+@media (max-width: 575px) {
+    .counter__inner {
+        grid-template: repeat(4, auto)/auto;
+    }
 }
 
 .counter__item {
@@ -728,11 +802,31 @@ button:focus {
     border-bottom: 5px solid rgba(211, 210, 243, 0.5);
 }
 
+@media (max-width: 1245px) {
+    .counter__item {
+        padding: 43px 10px;
+    }
+}
+
+@media (max-width: 1060px) {
+    .counter__item {
+        -ms-flex-align: center;
+        align-items: center;
+    }
+}
+
 .counter__item-number {
     font-weight: bold;
     font-size: 5.2rem;
     line-height: 1.5;
     margin-bottom: 4px;
+}
+
+@media (max-width: 1245px) {
+    .counter__item-number {
+        font-size: 4.2rem;
+        line-height: 1.2;
+    }
 }
 
 .counter__item-text {
@@ -743,6 +837,12 @@ button:focus {
 .opportunities {
     padding: 198px 0 100px;
     background: #fafafa;
+}
+
+@media (max-width: 1060px) {
+    .opportunities {
+        padding-top: 385px;
+    }
 }
 
 .opportunities__inner {
@@ -879,11 +979,13 @@ button:focus {
 
 .banner__img {
     position: absolute;
-    left: 40%;
+    left: 55%;
     top: 30%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     z-index: 1;
+    width: 100%;
+    max-width: 520px;
 }
 
 .try-btn--banner {
