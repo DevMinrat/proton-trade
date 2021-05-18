@@ -4,6 +4,18 @@
 
   background: #4867ff url(/assets/images/banner/banner-bg.png) no-repeat right;
 
+  @include breakpoint($xl-bp) {
+    padding: 61px 0;
+  }
+
+  @include breakpoint($md-bp) {
+    padding: 44px 0;
+  }
+
+  @include breakpoint($sm-bp) {
+    padding: 74px 0;
+  }
+
   &__inner {
     position: relative;
 
@@ -20,6 +32,14 @@
     letter-spacing: 0.02em;
 
     margin-bottom: 4px;
+
+    @include breakpoint($lg-bp) {
+      font-size: 2.4rem;
+    }
+
+    @include breakpoint($sm-bp) {
+      font-size: 1.8rem;
+    }
   }
 
   &__title {
@@ -29,6 +49,14 @@
     letter-spacing: 0.03em;
 
     margin-bottom: 19px;
+
+    @include breakpoint($lg-bp) {
+      font-size: 6rem;
+    }
+
+    @include breakpoint($sm-bp) {
+      font-size: 5.8rem;
+    }
   }
 
   &__img {
@@ -40,6 +68,21 @@
 
     width: 100%;
     max-width: 520px;
+
+    @include breakpoint($xl-bp) {
+      max-width: 420px;
+    }
+
+    @include breakpoint(950px) {
+      max-width: 150px;
+
+      top: -135px;
+      transform: none;
+    }
+
+    @include breakpoint(425px) {
+      max-width: 120px;
+    }
   }
 }
 

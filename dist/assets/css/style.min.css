@@ -800,6 +800,15 @@ button:focus {
   padding: 88px 0;
   margin: 160px 0 95px;
   background: #4867ff url(/assets/images/banner/banner-bg.png) no-repeat right; }
+  @media (max-width: 1245px) {
+    .banner {
+      padding: 61px 0; } }
+  @media (max-width: 769px) {
+    .banner {
+      padding: 44px 0; } }
+  @media (max-width: 575px) {
+    .banner {
+      padding: 74px 0; } }
   .banner__inner {
     position: relative;
     display: grid;
@@ -811,12 +820,24 @@ button:focus {
     font-size: 2.8rem;
     letter-spacing: 0.02em;
     margin-bottom: 4px; }
+    @media (max-width: 991px) {
+      .banner__suptitle {
+        font-size: 2.4rem; } }
+    @media (max-width: 575px) {
+      .banner__suptitle {
+        font-size: 1.8rem; } }
   .banner__title {
     font-family: Rubik;
     font-weight: bold;
     font-size: 7.4rem;
     letter-spacing: 0.03em;
     margin-bottom: 19px; }
+    @media (max-width: 991px) {
+      .banner__title {
+        font-size: 6rem; } }
+    @media (max-width: 575px) {
+      .banner__title {
+        font-size: 5.8rem; } }
   .banner__img {
     position: absolute;
     left: 55%;
@@ -825,6 +846,17 @@ button:focus {
     z-index: 1;
     width: 100%;
     max-width: 520px; }
+    @media (max-width: 1245px) {
+      .banner__img {
+        max-width: 420px; } }
+    @media (max-width: 950px) {
+      .banner__img {
+        max-width: 150px;
+        top: -135px;
+        transform: none; } }
+    @media (max-width: 425px) {
+      .banner__img {
+        max-width: 120px; } }
 
 .try-btn--banner {
   background: #4867ff;
