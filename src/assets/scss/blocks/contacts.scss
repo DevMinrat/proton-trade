@@ -53,12 +53,34 @@
       font-family: Poppins, sans-serif;
       font-size: 1.6rem;
       color: $black;
+    }
 
-      &::placeholder {
-        font-family: Poppins, sans-serif;
-        font-size: 1.6rem;
-        color: #808080;
-      }
+    .input-wrapper label,
+    .input-wrapper--textarea label {
+      display: block;
+
+      color: #808080;
+
+      transform: translate(20px, -45px);
+      transition: 0.5s;
+    }
+
+    .input-wrapper--textarea label {
+      transform: translate(20px, -160px);
+    }
+
+    .input-wrapper input:focus + label,
+    .input-wrapper input:valid + label {
+      font-size: 1rem;
+
+      transform: translate(20px, -65px);
+    }
+
+    .contacts__form-textarea:focus + label,
+    .contacts__form-textarea:valid + label {
+      font-size: 1rem;
+
+      transform: translate(20px, -178px);
     }
 
     &-input--text {
@@ -71,6 +93,8 @@
 
     .textarea-wrapper {
       grid-area: textarea;
+
+      position: relative;
     }
 
     &-textarea {
@@ -107,5 +131,14 @@
         background-color: $secondary;
       }
     }
+  }
+
+  .textarea-counter {
+    position: absolute;
+    right: 20px;
+    bottom: 55px;
+    z-index: 1;
+
+    color: #b8b8b8;
   }
 }

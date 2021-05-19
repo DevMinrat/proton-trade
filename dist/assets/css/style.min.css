@@ -927,16 +927,29 @@ button:focus {
       font-family: Poppins, sans-serif;
       font-size: 1.6rem;
       color: #343a40; }
-      .contacts__form .contacts__form-input::placeholder, .contacts__form-textarea::placeholder {
-        font-family: Poppins, sans-serif;
-        font-size: 1.6rem;
-        color: #808080; }
+    .contacts__form .input-wrapper label,
+    .contacts__form .input-wrapper--textarea label {
+      display: block;
+      color: #808080;
+      transform: translate(20px, -45px);
+      transition: 0.5s; }
+    .contacts__form .input-wrapper--textarea label {
+      transform: translate(20px, -160px); }
+    .contacts__form .input-wrapper input:focus + label,
+    .contacts__form .input-wrapper input:valid + label {
+      font-size: 1rem;
+      transform: translate(20px, -65px); }
+    .contacts__form .contacts__form-textarea:focus + label,
+    .contacts__form .contacts__form-textarea:valid + label {
+      font-size: 1rem;
+      transform: translate(20px, -178px); }
     .contacts__form-input--text {
       grid-area: text; }
     .contacts__form-input--email {
       grid-area: email; }
     .contacts__form .textarea-wrapper {
-      grid-area: textarea; }
+      grid-area: textarea;
+      position: relative; }
     .contacts__form-textarea {
       width: 100%;
       margin-bottom: 12px;
@@ -957,6 +970,12 @@ button:focus {
       padding: 18px 0; }
       .contacts__form-btn:hover {
         background-color: #122791; }
+  .contacts .textarea-counter {
+    position: absolute;
+    right: 20px;
+    bottom: 55px;
+    z-index: 1;
+    color: #b8b8b8; }
 
 .footer {
   padding: 32px 0;

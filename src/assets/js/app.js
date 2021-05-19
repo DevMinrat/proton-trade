@@ -3,7 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
     burgerMenu = document.querySelector(".burger-menu"),
     menu = document.querySelector(".menu"),
     headerLogo = document.querySelector(".header__logo"),
-    anchors = document.querySelectorAll('a[href*="#"]');
+    anchors = document.querySelectorAll('a[href*="#"]'),
+    textarea = document.querySelector("#contacts-textarea"),
+    counterCurrent = document.querySelector(".textarea-counter__current"),
+    counterTotal = (document.querySelector(
+      ".textarea-counter__total"
+    ).textContent = textarea.maxLength);
 
   function toggleMobileMenu() {
     header.classList.toggle("mobile");
@@ -36,4 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // counter contacts symbols
+
+  textarea.addEventListener("input", () => {
+    counterCurrent.textContent = textarea.value.length;
+  });
 });

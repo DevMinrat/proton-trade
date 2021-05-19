@@ -209,12 +209,25 @@ title: Главная страница
                 <p class="contacts__subtitle">Можете задать нам любой вопрос про бота</p>
             </div>
             <form class="contacts__form" action="#">
-                <input class="contacts__form-input contacts__form-input--text" type="text" placeholder="Имя" required>
-                <input class="contacts__form-input contacts__form-input--email" type="email" placeholder="Email"
-                    required>
+                <div class="input-wrapper">
+                    <input class="contacts__form-input contacts__form-input--text" type="text" name="name" id="name"
+                        required>
+                    <label for="name">Имя</label>
+                </div>
+                <div class="input-wrapper">
+                    <input class="contacts__form-input contacts__form-input--email" type="email" name="email" id="email"
+                        required>
+                    <label for="email">Email</label>
+                </div>
                 <div class="textarea-wrapper">
-                    <textarea class="contacts__form-textarea" name="" id="" rows="5" placeholder="Сообщение"
-                        minlength="10" maxlength="500"></textarea>
+                    <div class="input-wrapper--textarea">
+                        <textarea class="contacts__form-textarea" name="contacts-textarea" id="contacts-textarea"
+                            rows="5" minlength="10" maxlength="500" required></textarea>
+                        <label for="contacts-textarea">Сообщение</label>
+                    </div>
+                    <span class="textarea-counter">
+                        <span class="textarea-counter__current">0</span>/<span class="textarea-counter__total"></span>
+                    </span>
                     <p class="contacts__form-note">Нажимая на кнопку «Отправить вопрос», вы даете согласие на обработку
                         персональных данных.</p>
                 </div>

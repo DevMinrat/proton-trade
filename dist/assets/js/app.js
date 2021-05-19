@@ -11,7 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
       burgerMenu = document.querySelector(".burger-menu"),
       menu = document.querySelector(".menu"),
       headerLogo = document.querySelector(".header__logo"),
-      anchors = document.querySelectorAll('a[href*="#"]');
+      anchors = document.querySelectorAll('a[href*="#"]'),
+      textarea = document.querySelector("#contacts-textarea"),
+      counterCurrent = document.querySelector(".textarea-counter__current"),
+      counterTotal = document.querySelector(".textarea-counter__total").textContent = textarea.maxLength;
 
   function toggleMobileMenu() {
     header.classList.toggle("mobile");
@@ -48,10 +51,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (_iterator.s(); !(_step = _iterator.n()).done;) {
       _loop();
-    }
+    } // counter contacts symbols
+
   } catch (err) {
     _iterator.e(err);
   } finally {
     _iterator.f();
   }
+
+  textarea.addEventListener("input", function () {
+    counterCurrent.textContent = textarea.value.length;
+  });
 });
