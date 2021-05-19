@@ -897,16 +897,28 @@ button:focus {
 .contacts {
   padding: 100px 0;
   background-color: #fbfbfb; }
+  @media (max-width: 880px) {
+    .contacts {
+      padding: 60px 0; } }
   .contacts__inner {
     display: grid;
-    grid-template: auto/repeat(2, max-content);
+    grid-template: auto/repeat(2, auto);
     grid-column-gap: 24px; }
+    @media (max-width: 880px) {
+      .contacts__inner {
+        grid-template: auto / auto;
+        grid-row-gap: 25px; } }
   .contacts__form {
     width: 100%;
     max-width: 776px;
     display: grid;
     grid-template: "text email" 65px "textarea textarea" auto "btn ." 60px / 1fr 1fr;
     grid-gap: 24px; }
+    @media (max-width: 575px) {
+      .contacts__form {
+        grid-template: "text" 65px "email" 56px "textarea" auto "btn" 60px / 1fr; } }
+    .contacts__form-input {
+      width: 100%; }
     .contacts__form .contacts__form-input, .contacts__form-textarea {
       padding: 24px 20px;
       background: #edeeef;
@@ -930,7 +942,9 @@ button:focus {
       margin-bottom: 12px;
       color: #808080; }
     .contacts__form-note {
-      grid-area: note; }
+      grid-area: note;
+      color: #808080;
+      font-size: 1.4rem; }
     .contacts__form-btn {
       grid-area: btn;
       width: 100%;

@@ -3,10 +3,19 @@
 
   background-color: #fbfbfb;
 
+  @include breakpoint(880px) {
+    padding: 60px 0;
+  }
+
   &__inner {
     display: grid;
-    grid-template: auto / repeat(2, max-content);
+    grid-template: auto / repeat(2, auto);
     grid-column-gap: 24px;
+
+    @include breakpoint(880px) {
+      grid-template: auto / auto;
+      grid-row-gap: 25px;
+    }
   }
 
   &__form {
@@ -20,6 +29,18 @@
       "textarea textarea" auto
       "btn ." 60px / 1fr 1fr;
     grid-gap: 24px;
+
+    @include breakpoint($sm-bp) {
+      grid-template:
+        "text" 65px
+        "email" 56px
+        "textarea" auto
+        "btn" 60px / 1fr;
+    }
+
+    &-input {
+      width: 100%;
+    }
 
     & &-input,
     &-textarea {
@@ -62,6 +83,9 @@
 
     &-note {
       grid-area: note;
+
+      color: #808080;
+      font-size: 1.4rem;
     }
 
     &-btn {
