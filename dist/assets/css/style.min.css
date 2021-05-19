@@ -966,6 +966,13 @@ button:focus {
     justify-content: space-between;
     align-items: center;
     color: #ffffff; }
+    @media (max-width: 575px) {
+      .footer__inner {
+        flex-wrap: wrap; }
+        .footer__inner > * + * {
+          margin-top: 20px; } }
+    .footer__inner > * {
+      padding: 0 10px; }
     .footer__inner a {
       color: #ffffff; }
 
