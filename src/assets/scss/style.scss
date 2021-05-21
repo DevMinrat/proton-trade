@@ -76,6 +76,29 @@ button:focus {
   height: 16px;
 }
 
+.arrow-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  display: none;
+  z-index: 22;
+
+  cursor: pointer;
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+
+    fill: #3355ff;
+    stroke: #3355ff;
+
+    &:hover {
+      fill: $secondary;
+      stroke: $secondary;
+    }
+  }
+}
+
 /* Vendors */
 
 /* Blocks */

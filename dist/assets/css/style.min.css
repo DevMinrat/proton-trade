@@ -453,6 +453,22 @@ button:focus {
   width: 60px;
   height: 16px; }
 
+.arrow-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  display: none;
+  z-index: 22;
+  cursor: pointer; }
+  .arrow-top__icon {
+    width: 48px;
+    height: 48px;
+    fill: #3355ff;
+    stroke: #3355ff; }
+    .arrow-top__icon:hover {
+      fill: #122791;
+      stroke: #122791; }
+
 /* Vendors */
 /* Blocks */
 .page {

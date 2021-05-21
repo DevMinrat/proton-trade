@@ -1219,11 +1219,23 @@ button:focus {
     background-color: #fbfbfb;
 }
 
+@media (max-width: 880px) {
+    .contacts {
+        padding: 60px 0;
+    }
+}
+
 .contacts__inner {
     display: grid;
-    grid-template: auto/repeat(2, -webkit-max-content);
-    grid-template: auto/repeat(2, max-content);
+    grid-template: auto/repeat(2, auto);
     grid-column-gap: 24px;
+}
+
+@media (max-width: 880px) {
+    .contacts__inner {
+        grid-template: auto / auto;
+        grid-row-gap: 25px;
+    }
 }
 
 .contacts__form {
@@ -1232,6 +1244,16 @@ button:focus {
     display: grid;
     grid-template: "text email" 65px "textarea textarea" auto "btn ." 60px / 1fr 1fr;
     grid-gap: 24px;
+}
+
+@media (max-width: 575px) {
+    .contacts__form {
+        grid-template: "text" 65px "email" 56px "textarea" auto "btn" 60px / 1fr;
+    }
+}
+
+.contacts__form-input {
+    width: 100%;
 }
 
 .contacts__form .contacts__form-input, .contacts__form-textarea {
@@ -1244,34 +1266,32 @@ button:focus {
     color: #343a40;
 }
 
-.contacts__form .contacts__form-input::-webkit-input-placeholder, .contacts__form-textarea::-webkit-input-placeholder {
-    font-family: Poppins, sans-serif;
-    font-size: 1.6rem;
+.contacts__form .input-wrapper label,
+    .contacts__form .input-wrapper--textarea label {
+    display: block;
     color: #808080;
+    -webkit-transform: translate(20px, -45px);
+    transform: translate(20px, -45px);
+    transition: 0.5s;
 }
 
-.contacts__form .contacts__form-input::-moz-placeholder, .contacts__form-textarea::-moz-placeholder {
-    font-family: Poppins, sans-serif;
-    font-size: 1.6rem;
-    color: #808080;
+.contacts__form .input-wrapper--textarea label {
+    -webkit-transform: translate(20px, -160px);
+    transform: translate(20px, -160px);
 }
 
-.contacts__form .contacts__form-input:-ms-input-placeholder, .contacts__form-textarea:-ms-input-placeholder {
-    font-family: Poppins, sans-serif;
-    font-size: 1.6rem;
-    color: #808080;
+.contacts__form .input-wrapper input:focus + label,
+    .contacts__form .input-wrapper input:valid + label {
+    font-size: 1rem;
+    -webkit-transform: translate(20px, -65px);
+    transform: translate(20px, -65px);
 }
 
-.contacts__form .contacts__form-input::-ms-input-placeholder, .contacts__form-textarea::-ms-input-placeholder {
-    font-family: Poppins, sans-serif;
-    font-size: 1.6rem;
-    color: #808080;
-}
-
-.contacts__form .contacts__form-input::placeholder, .contacts__form-textarea::placeholder {
-    font-family: Poppins, sans-serif;
-    font-size: 1.6rem;
-    color: #808080;
+.contacts__form .contacts__form-textarea:focus + label,
+    .contacts__form .contacts__form-textarea:valid + label {
+    font-size: 1rem;
+    -webkit-transform: translate(20px, -178px);
+    transform: translate(20px, -178px);
 }
 
 .contacts__form-input--text {
@@ -1284,6 +1304,7 @@ button:focus {
 
 .contacts__form .textarea-wrapper {
     grid-area: textarea;
+    position: relative;
 }
 
 .contacts__form-textarea {
@@ -1294,6 +1315,8 @@ button:focus {
 
 .contacts__form-note {
     grid-area: note;
+    color: #808080;
+    font-size: 1.4rem;
 }
 
 .contacts__form-btn {
@@ -1312,6 +1335,14 @@ button:focus {
     background-color: #122791;
 }
 
+.contacts .textarea-counter {
+    position: absolute;
+    right: 20px;
+    bottom: 55px;
+    z-index: 1;
+    color: #b8b8b8;
+}
+
 .footer {
     padding: 32px 0;
     background-color: #122791;
@@ -1325,6 +1356,21 @@ button:focus {
     -ms-flex-align: center;
     align-items: center;
     color: #ffffff;
+}
+
+@media (max-width: 575px) {
+    .footer__inner {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .footer__inner > * + * {
+        margin-top: 20px;
+    }
+}
+
+.footer__inner > * {
+    padding: 0 10px;
 }
 
 .footer__inner a {
