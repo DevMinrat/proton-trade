@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
+  //= components/mail.js
+
   const header = document.querySelector(".header"),
     burgerMenu = document.querySelector(".burger-menu"),
     menu = document.querySelector(".menu"),
     headerLogo = document.querySelector(".header__logo"),
     anchors = document.querySelectorAll('a[href*="#"]'),
-    textarea = document.querySelector("#contacts-textarea"),
+    textarea = document.querySelector("#message"),
     counterCurrent = document.querySelector(".textarea-counter__current"),
     counterTotal = (document.querySelector(
       ".textarea-counter__total"

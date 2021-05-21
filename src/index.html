@@ -208,21 +208,21 @@ title: Главная страница
                 <h2 class="section__title partners__title">Для связи с нами</h2>
                 <p class="contacts__subtitle">Можете задать нам любой вопрос про бота</p>
             </div>
-            <form class="contacts__form" action="#">
+            <form class="contacts__form" action="#" id="form" method="POST">
                 <div class="input-wrapper">
-                    <input class="contacts__form-input contacts__form-input--text" type="text" name="name" id="name"
-                        required>
+                    <input class="contacts__form-input contacts__form-input--text _req" type="text" name="name"
+                        id="name" required>
                     <label for="name">Имя</label>
                 </div>
                 <div class="input-wrapper">
-                    <input class="contacts__form-input contacts__form-input--email" type="email" name="email" id="email"
-                        required>
+                    <input class="contacts__form-input contacts__form-input--email _req _email" type="email"
+                        name="email" id="email" required>
                     <label for="email">Email</label>
                 </div>
                 <div class="textarea-wrapper">
                     <div class="input-wrapper--textarea">
-                        <textarea class="contacts__form-textarea" name="contacts-textarea" id="contacts-textarea"
-                            rows="5" minlength="10" maxlength="500" required></textarea>
+                        <textarea class="contacts__form-textarea _req" name="message" id="message" rows="5"
+                            minlength="10" maxlength="500" required></textarea>
                         <label for="contacts-textarea">Сообщение</label>
                     </div>
                     <span class="textarea-counter">
@@ -231,9 +231,20 @@ title: Главная страница
                     <p class="contacts__form-note">Нажимая на кнопку «Отправить вопрос», вы даете согласие на обработку
                         персональных данных.</p>
                 </div>
-                <button class="contacts__form-btn">Отправить вопрос</button>
+                <button type="submit" class="contacts__form-btn">Отправить вопрос</button>
             </form>
         </div>
+    </div>
+
+    <div class="contacts__success hide">
+        <div class="contacts__success-check">
+            <svg width="100" height="100">
+                <use xlink:href="#check"></use>
+            </svg>
+        </div>
+
+        <div class="contacts__success-text">Ваше сообщение успешно отправлено</div>
+        <button type="button" class="contacts__success-btn">OK</button>
     </div>
 </section>
 

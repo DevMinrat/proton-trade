@@ -506,6 +506,27 @@ button:focus {
     height: 16px;
 }
 
+.arrow-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    display: none;
+    z-index: 22;
+    cursor: pointer;
+}
+
+.arrow-top__icon {
+    width: 48px;
+    height: 48px;
+    fill: #3355ff;
+    stroke: #3355ff;
+}
+
+.arrow-top__icon:hover {
+    fill: #122791;
+    stroke: #122791;
+}
+
 /* Vendors */
 /* Blocks */
 .page {
@@ -1215,6 +1236,7 @@ button:focus {
 }
 
 .contacts {
+    position: relative;
     padding: 100px 0;
     background-color: #fbfbfb;
 }
@@ -1333,6 +1355,24 @@ button:focus {
 
 .contacts__form-btn:hover {
     background-color: #122791;
+}
+
+.contacts::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.7) url(/assets/images/loading.gif) center/50px no-repeat;
+}
+
+.contacts._sending::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 .contacts .textarea-counter {
