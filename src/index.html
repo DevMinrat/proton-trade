@@ -210,24 +210,25 @@ title: Главная страница
             </div>
             <form class="contacts__form" action="#" id="form" method="POST">
                 <div class="input-wrapper">
-                    <input class="contacts__form-input contacts__form-input--text _req" type="text" name="name"
-                        id="name" required>
+                    <input class="contacts__form-input contacts__form-input--text" type="text" name="name" id="name"
+                        required>
                     <label for="name">Имя</label>
                 </div>
                 <div class="input-wrapper">
-                    <input class="contacts__form-input contacts__form-input--email _req _email" type="email"
-                        name="email" id="email" required>
+                    <input class="contacts__form-input contacts__form-input--email" type="email" name="email" id="email"
+                        required>
                     <label for="email">Email</label>
                 </div>
                 <div class="textarea-wrapper">
                     <div class="input-wrapper--textarea">
-                        <textarea class="contacts__form-textarea _req" name="message" id="message" rows="5"
-                            minlength="10" maxlength="500" required></textarea>
-                        <label for="contacts-textarea">Сообщение</label>
+                        <textarea class="contacts__form-textarea" name="message" id="message" rows="5" minlength="10"
+                            maxlength="500" required></textarea>
+                        <label for="message">Сообщение</label>
+                        <span class="textarea-counter">
+                            <span class="textarea-counter__current">0</span>/<span
+                                class="textarea-counter__total"></span>
+                        </span>
                     </div>
-                    <span class="textarea-counter">
-                        <span class="textarea-counter__current">0</span>/<span class="textarea-counter__total"></span>
-                    </span>
                     <p class="contacts__form-note">Нажимая на кнопку «Отправить вопрос», вы даете согласие на обработку
                         персональных данных.</p>
                 </div>

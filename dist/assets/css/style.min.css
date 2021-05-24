@@ -950,6 +950,8 @@ button:focus {
       color: #808080;
       transform: translate(20px, -45px);
       transition: 0.5s; }
+    .contacts__form .input-wrapper--textarea {
+      position: relative; }
     .contacts__form .input-wrapper--textarea label {
       transform: translate(20px, -160px); }
     .contacts__form .input-wrapper input:focus + label,
@@ -965,8 +967,7 @@ button:focus {
     .contacts__form-input--email {
       grid-area: email; }
     .contacts__form .textarea-wrapper {
-      grid-area: textarea;
-      position: relative; }
+      grid-area: textarea; }
     .contacts__form-textarea {
       width: 100%;
       margin-bottom: 12px;
@@ -997,6 +998,7 @@ button:focus {
     z-index: 99;
     opacity: 0;
     visibility: hidden;
+    transition: all 0.5s linear;
     background: rgba(0, 0, 0, 0.7) url(/assets/images/loading.gif) center/50px no-repeat; }
   .contacts._sending::after {
     opacity: 1;
@@ -1004,20 +1006,31 @@ button:focus {
   .contacts .textarea-counter {
     position: absolute;
     right: 20px;
-    bottom: 55px;
+    bottom: 45px;
     z-index: 1;
     color: #b8b8b8; }
   .contacts__success {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 140px 0; }
+    padding: 140px 0;
+    background: #ffffff; }
     .contacts__success-text {
       font-family: Rubik, sans-serif;
       font-weight: bold;
       font-size: 4.2rem;
       color: #343a40;
+      text-align: center;
       margin: 40px 0; }
+      @media (max-width: 1245px) {
+        .contacts__success-text {
+          font-size: 2.4rem; } }
     .contacts__success-btn {
       width: 100%;
       max-width: 196px;

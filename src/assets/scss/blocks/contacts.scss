@@ -67,6 +67,10 @@
       transition: 0.5s;
     }
 
+    .input-wrapper--textarea {
+      position: relative;
+    }
+
     .input-wrapper--textarea label {
       transform: translate(20px, -160px);
     }
@@ -95,8 +99,6 @@
 
     .textarea-wrapper {
       grid-area: textarea;
-
-      position: relative;
     }
 
     &-textarea {
@@ -147,7 +149,7 @@
     opacity: 0;
     visibility: hidden;
 
-    // transition: all 0.5s linear;
+    transition: all 0.5s linear;
 
     background: rgba($color: #000000, $alpha: 0.7)
       url(/assets/images/loading.gif) center / 50px no-repeat;
@@ -161,7 +163,7 @@
   .textarea-counter {
     position: absolute;
     right: 20px;
-    bottom: 55px;
+    bottom: 45px;
     z-index: 1;
 
     color: #b8b8b8;
@@ -170,20 +172,34 @@
   // success
 
   &__success {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    width: 100%;
+    height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
 
     padding: 140px 0;
 
+    background: $white;
+
     &-text {
       font-family: Rubik, sans-serif;
       font-weight: bold;
       font-size: 4.2rem;
-
       color: #343a40;
+      text-align: center;
 
       margin: 40px 0;
+
+      @include breakpoint($xl-bp) {
+        font-size: 2.4rem;
+      }
     }
 
     &-btn {
