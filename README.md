@@ -17,7 +17,7 @@ ____
 #### Демонстрация сайта 
 ____    
 
-![image]()
+![image](https://github.com/DevMinrat/proton-trade/blob/master/WMEYnmLMZh.gif)
 
 #### Ссылки    
 ____   
